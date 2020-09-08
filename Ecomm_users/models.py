@@ -45,7 +45,8 @@ class Product(models.Model):
 # primary key(order_id),  foreign key(c_id) references customers(c_id), foreign key(pid) references products(pid));
 class Order(models.Model):
     order_id = models.AutoField(primary_key=True)
-    customer_id = models.ForeignKey(Category,on_delete=models.RESTRICT)
-    product_id = models.ForeignKey(Product,on_delete=models.RESTRICT)
+    customer = models.ForeignKey(Customer,on_delete=models.RESTRICT)
+    product= models.ForeignKey(Product,on_delete=models.RESTRICT)
     quantity = models.IntegerField()
-    date = models.DateField()
+    order_date = models.DateField()
+    amount = models.IntegerField()
