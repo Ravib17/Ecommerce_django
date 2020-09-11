@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Ecomm_users.apps.EcommUsersConfig',
+    'Ecomm_admin.apps.EcommAdminConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

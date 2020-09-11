@@ -21,7 +21,6 @@ urlpatterns = [
 path('polls/',include('polls.urls')),
 path('',TemplateView.as_view(template_name="Ecommerce/index.html")),
 path('ecomm_user/',include('Ecomm_users.urls')),
-# path('ecomm_admin/',include('Ecomm_admin.urls')),
+path('ecomm_admin/',include('Ecomm_admin.urls')),
 path('admin/',admin.site.urls),
-
 ]
